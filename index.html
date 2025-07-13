@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Analytics Hub 🏋️‍♀️</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #74ebd5, #acb6e5);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-in;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff7e5f;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .intro-section, .dashboard-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .intro-section h2, .dashboard-section h2 {
+            color: #ff7e5f;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .dashboard-section p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .tableau-embed {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .tableau-embed iframe {
+            width: 100%;
+            height: 600px;
+            border: 2px solid #feb47b;
+            border-radius: 10px;
+            background: #f9f9f9;
+        }
+
+        footer {
+            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .tableau-embed iframe {
+                height: 400px;
+            }
+
+            .intro-section h2, .dashboard-section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fitness Analytics Hub 🏋️‍♀️💪</h1>
+        <p>Your go-to system for managing gym clients and unlocking data-driven insights! 📈</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#operational">Operational 🧾</a></li>
+            <li><a href="#managerial">Managerial 📊</a></li>
+            <li><a href="#strategic">Strategic 🧠</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="intro-section">
+            <h2>Welcome to Fitness Analytics Hub! 🌟</h2>
+            <p>Our Fitness Analytics Hub is a powerful data analytics system designed to manage gym clients effectively. From tracking member subscriptions and attendance to analyzing behavior trends and strategic growth opportunities, our Tableau dashboards provide insights for operational, managerial, and strategic decision-making. Dive in and explore the data! 🚀</p>
+        </div>
+
+        <div class="dashboard-section" id="operational">
+            <h2>Operational Dashboard 🧾</h2>
+            <p>This dashboard tracks daily gym operations, including member check-ins, class attendance, and subscription statuses. Stay on top of the day-to-day pulse of your fitness center! 🏃‍♂️</p>
+            <div class="tableau-embed">
+                <!-- Placeholder for Tableau Public embed (replace with actual public share link) -->
+                <iframe src="https://public.tableau.com/views/FitnessCenterDashboard1/sheet3?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" title="Operational Dashboard"></iframe>
+            </div>
+        </div>
+
+        <div class="dashboard-section" id="managerial">
+            <h2>Managerial Dashboard 📊</h2>
+            <p>Analyze membership trends, revenue streams, and class performance to optimize resource allocation and improve gym operations. Make data-driven decisions with ease! 💸</p>
+            <div class="tableau-embed">
+                <!-- Placeholder for Tableau Public embed (replace with actual public share link) -->
+                <iframe src="https://public.tableau.com/views/ManagerialDashboardSample/Managerial?:language=en-US&:display_count=n&:origin=viz_share_link" title="Managerial Dashboard"></iframe>
+            </div>
+        </div>
+
+        <div class="dashboard-section" id="strategic">
+            <h2>Strategic Dashboard 🧠</h2>
+            <p>Explore long-term trends, customer retention rates, and market opportunities to guide the strategic growth of your fitness center. Plan for the future! 🌍</p>
+            <div class="tableau-embed">
+                <!-- Placeholder for Tableau Public embed (replace with actual public share link) -->
+                <iframe src="https://public.tableau.com/views/StrategicDashboardSample/Strategic?:language=en-US&:display_count=n&:origin=viz_share_link" title="Strategic Dashboard"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Created by Grok for an academic project. All rights reserved. © 2025 Fitness Analytics Hub 🏋️‍♀️</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Fade-in animation trigger on scroll
+        const sections = document.querySelectorAll('.intro-section, .dashboard-section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.8s ease-out forwards';
+                }
+            });
+        }, { threshold: 0.2 });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
